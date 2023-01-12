@@ -116,20 +116,16 @@ case3) OrderStatus
 
 
 3. Compensation / Correlation
+
+
 Compensation(보상) : 실패/에러에 대한 롤백 프로그래밍 처리
 ->주문취소시 요리가 이미 시작시에는 취소할 수 없도록 처리한다.
-
-
-
-
-
-
-
 
 Correlation(상호보완) : 정-> 역방향(취소)에 대한 프로그래밍 처리 
 -> 주문취소시 결재취소 같이 진행
 
 
+![image](https://user-images.githubusercontent.com/121836061/212009752-961651b4-0338-4d51-92bc-67659a357840.png)
 
 
 
