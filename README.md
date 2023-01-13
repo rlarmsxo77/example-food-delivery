@@ -66,7 +66,7 @@
 
 case1) MenuRead
 
-![image](https://user-images.githubusercontent.com/121836061/212004048-6db2e3a6-4cdf-4ca2-8675-674a050951dc.png)
+![image](https://user-images.githubusercontent.com/121836061/212212618-658b377a-eac4-466b-94d8-80e03a1b5800.png)
 
 
 
@@ -123,12 +123,41 @@ case3) OrderStatus
 
 Compensation(보상) : 실패/에러에 대한 롤백 프로그래밍 처리
 ->주문취소시 요리가 이미 시작시에는 취소할 수 없도록 처리한다.
+----------------------------------------------------------------
+    @PreOrderCancel
+    public static void OrderCancelRelay(OrderCancelled OrderCancelled){
+        Order Order = new Order();
+        OrderStore orderStore = new OrderStore();
+        Customer customer = new Customer();
+        if(orderStore.getCookStart().equals("시작됨")){
+            customer.sendMessage("요리가 시작되어 취소할 수 없습니다.");
+             repository().save(order);
+    }
+----------------------------------------------------------------
 
 Correlation(상호보완) : 정-> 역방향(취소)에 대한 프로그래밍 처리 
 -> 주문취소시 결재취소 같이 진행
+------------------------------------------------
+    @PostOderCancel
+    public void PayCancel(PayCanceled PayCanceled) {
+        Order order = new Order();
+        Payment payment = new Payment();
+        if(order.getStatus().equals("주문취소됨")){
+            payment.setStatus("결재취소");
+             repository().save(payment);
+        }
+------------------------------------------------
 
 
 ![image](https://user-images.githubusercontent.com/121836061/212009752-961651b4-0338-4d51-92bc-67659a357840.png)
+
+
+
+
+
+
+
+
 
 
 
