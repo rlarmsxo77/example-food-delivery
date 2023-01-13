@@ -67,7 +67,8 @@
 
 case1) MenuRead
 
-![image](https://user-images.githubusercontent.com/121836061/212212618-658b377a-eac4-466b-94d8-80e03a1b5800.png)
+![image](https://user-images.githubusercontent.com/121836061/212215253-d164e23f-7a43-43e9-b84c-ddaf9f7a9089.png)
+
 
 
 
