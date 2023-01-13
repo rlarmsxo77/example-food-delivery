@@ -54,7 +54,8 @@
 # 체크포인트
 
 1. Saga (Pub / Sub)
-![image](https://user-images.githubusercontent.com/121836061/212204637-3c988108-ac56-42af-87c6-69f930905455.png)
+![image](https://user-images.githubusercontent.com/121836061/212212975-c85e8ee0-61ac-4777-b093-cdc30f440070.png)
+
 
 
 
