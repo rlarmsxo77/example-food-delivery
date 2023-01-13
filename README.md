@@ -53,7 +53,7 @@
 
 # 체크포인트
 
-1. Saga (Pub / Sub)
+# 1. Saga (Pub / Sub)
 ![image](https://user-images.githubusercontent.com/121836061/212212975-c85e8ee0-61ac-4777-b093-cdc30f440070.png)
 
 
@@ -63,7 +63,7 @@
 
 
 
-2. CQRS
+# 2. CQRS
 
 case1) MenuRead
 
@@ -119,7 +119,7 @@ case3) OrderStatus
 
 
 
-3. Compensation / Correlation
+# 3. Compensation / Correlation
 
 
 Compensation(보상) : 실패/에러에 대한 롤백 프로그래밍 처리
